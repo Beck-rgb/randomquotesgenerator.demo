@@ -1,0 +1,36 @@
+/* Body */
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: monospace;
+    /* Add gradient to the background */
+    background: linear-gradient(to left bottom, lightblue, rgb(186, 68, 161));
+    /* Center all the elements in the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Container */
+.container{
+    background-color: rgba(255, 255, 255, 0.3);
+    /* padding is inside the element unlike margin */
+    padding: 20px;
+    /* Shadow effect*/
+    box-shadow: 5px 10px 10px rgba(0,0,0,.5);
+    border-radius: 50px;
+    width: 85%;
+    text-align: center;
+    color: rgb(151, 0, 0);
+}
+
+#btn{
+    background-color: aqua;
+    color: black;
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px ;
+}

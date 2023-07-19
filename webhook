@@ -1,0 +1,43 @@
+let field = request.body.content;
+let sender = request.body.senderId;
+
+
+if (message.length !=0){
+
+    function requestHandler(msg){
+        // handle the request
+        const apiKey="FZOSGMBgnNrpu4xoEFsg3w==fVEkVE1OAVTaR6xc";
+        const url = 'https://quotes-diffusion.p.rapidapi.com/random';
+        const options = {
+	        method: 'GET',
+	        headers: {
+		        'X-RapidAPI-Key': 'f410374e79msha41c419e8f65ec0p18aec8jsnb2fae40fcd6f',
+		        'X-RapidAPI-Host': 'quotes-diffusion.p.rapidapi.com'
+	        }
+        };
+
+        async function getQuote(){
+            try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                const quoteMessage=result.data.title;
+                const quoteImage = result.data.image_sd;
+            } 
+            catch (error) {
+                console.error(error);
+            }
+        }
+
+        const respondingQuote = {
+            "quoteText" : quoteMessage,
+            "quoteImg"  : quoteImage,
+        }
+        return respondingQuote;
+    }
+}
+
+
+function sendQuote(){
+    // send the quote from quotes api
+   
+}
